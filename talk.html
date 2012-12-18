@@ -415,6 +415,18 @@
 				<p>
 					The downside is a scoping issue because of the use of an iframe, the article talks about solutions which seem solid, if you want me to talk about scoping I can&hellip; but you should just read <a href="http://robertnyman.com/2008/10/09/explaining-javascript-scope-and-closures/" target="_blank">this article</a>.
 				</p>
+				<p>
+					Derek also asked about the benefit of using <code>var x = 1, y = 2;</code> over <code>var x = 1; var y = 2;</code>
+				</p>
+				<p>
+					It was commonly thought that comma seperating the variables was beneificial, and in some browsers that is the case, but as <a href="http://jsperf.com/comma-seperated-vars" target="_blank">these results show</a> there really isn't that much of a difference.
+				</p>
+				<p>
+					My preference would be to comma seperate, simply because if you fail to do any other minification it is slightly smaller and in my opinion looks slightly nicer.
+				</p>
+				<p>
+					Be wary that if you comma seperate and mess it up, the variables will still get declared but could have global scope, you don't want that!
+				</p>
 			</section>
 			<section>
 				<h1>Thanks! &hearts;</h1>
